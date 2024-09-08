@@ -1,0 +1,1241 @@
+.modern-table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modern-table thead th {
+    border-bottom: none;
+    font-weight: bold;
+    color: #555;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.modern-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.modern-table tbody td {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+/* for desktop */
+@media screen and (min-width:1024px) {
+
+    input:focus{
+        outline: black;
+    }
+    /* searchbar */
+    .search-container {
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+    }
+    #searchInput {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 50px;
+        border: 1px solid #ddd;
+        outline: none;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+    }
+    #searchInput:focus {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* scrollbar css */
+    /* Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+        display: none;
+        /* Hides the scrollbar */
+    }
+
+    /* Fallback for Firefox */
+    html {
+        scrollbar-width: none;
+        /* Hides the scrollbar */
+    }
+
+    /* Fallback for Internet Explorer and Edge */
+    body {
+        -ms-overflow-style: none;
+        /* Hides the scrollbar */
+    }
+
+
+
+    .navtab-mobile {
+        display: none;
+    }
+
+    /* Navbar and Navtab */
+    body {
+        background-color: whitesmoke;
+        overflow-x: hidden;
+    }
+
+    #mobilecontent {
+        display: none;
+    }
+
+    .navtab {
+        background-color: #130a20;
+        height: 100vh;
+        position: fixed;
+        color: black;
+        top: 0;
+        left: 0;
+        width: 16.6667%;
+        /* 2 out of 12 columns (Bootstrap grid) */
+        z-index: 1000;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navtab-content {
+        overflow-y: auto;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    #logo img {
+        width: 150px;
+        margin-bottom: 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-link {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+    }
+
+    .nav-link:hover {
+        background-color: #495057;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .nav-link h4 {
+        margin-top: 0px;
+        font-size: 1.1rem;
+    }
+
+    #tabcontent {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 0px;
+        padding-top: 8px;
+    }
+
+    #tabcontent svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .content {
+        margin-left: 16.6667%;
+        /* Same as sidebar width */
+        padding: 1px;
+    }
+
+    #navbar {
+        width: 100%;
+        height: 100%;
+        color: white;
+        border-left: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        margin-top: 0px;
+    }
+
+    #search {
+        margin-left: 12px;
+        padding: 2px 3px;
+        width: 90%;
+        outline: 0;
+        border-radius: 8px;
+        height: auto;
+    }
+
+    input {
+        outline: 0;
+    }
+
+    #searchicon {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        width: 16vw;
+        margin-left: -115px;
+    }
+
+    /* notification style */
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Modal Styles */
+    .modalfr {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #open-modal {
+        outline: 0;
+        margin-left: -12px;
+        background-color: transparent;
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        color: black;
+        background-color: #ddd;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .notification-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .notification {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-size: 16px;
+    }
+
+    .notification:last-child {
+        border-bottom: none;
+    }
+
+    .read {
+        background-color: transparent;
+    }
+
+    .read-status {
+        float: right;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    .view-more-btn {
+        display: block;
+        margin-top: 10px;
+    }
+
+    /* dropdown style */
+
+    #drop button {
+        border: 1px solid;
+        font-size: smaller;
+        margin-top: 17px;
+        background-color: #DA1C5C;
+    }
+
+
+    #disabled {
+        color: black;
+    }
+
+    #drop-item {
+        display: flex;
+        text-align: center;
+        height: 32px;
+        justify-content: space-between;
+    }
+
+    #drop-item p {
+        font-size: medium;
+    }
+
+    #drop-item svg {
+        margin-top: 5px;
+    }
+
+    /* Media style */
+    .marketmedia {
+        width: 100%;
+        height: 100%;
+        margin-top: 5px;
+        padding: 8px 13px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .imagedisplay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imagedisplay h1 {
+        color: black;
+    }
+
+    .imagedisplay header {
+        width: 100%;
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imagedisplay header h1 {
+        margin: 0;
+    }
+
+
+    /* Promotion style */
+    #procont {
+        width: 100%;
+        margin: 0 auto;
+       height: auto;
+    }
+
+    .image-uploader-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .image-display {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .image-display img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        display: block;
+    }
+
+    .input-container {
+        margin-top: 10px;
+    }
+
+    .carousel {
+        text-align: center;
+        width: 100%;
+    }
+
+    .carousel-images {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        max-width: 200px;
+        margin: 18 auto;
+    }
+
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .carousel-buttons {
+        margin-top: 10px;
+    }
+
+
+    /* Ecommerce styling */
+
+
+    .dashboard {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard .card {
+        border: 1px solid #ddd;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        color: black;
+        width: 24%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .dashboard .card div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard .card svg {
+        padding: 0px 5px;
+        color: #818181;
+        border-radius: 8px;
+        margin-left: 3px;
+    }
+    .dashboard .card svg:hover{
+        color: white;
+    }
+
+    .dashboard .card h3 {
+        margin-top: 0px;
+        font-size: 3rem;
+        color: #130a20;
+    }
+    .dashboard .card:hover{
+        background-color: #DA1C5C;
+        color: #f0f0f0;
+        border: 1px solid #DA1C5C;
+    }
+    .dashboard .card:hover svg{
+        color: #f0f0f0;
+    }
+    .dashboard .card:hover p{
+        color: #f0f0f0;
+    }
+
+    .dashboard .card div p {
+        margin-top: 1px;
+        color: #818181;
+        font-size: 1.5rem;
+    }
+
+    .dashboard .overview {
+        display: flex;
+        gap: 10px;
+    }
+
+    .dashboard .grap {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .dashboard .salegr {
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        margin: 0;
+    }
+
+    .dashboard .graphsection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .dashboard #bestsell {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        margin: 70px 10px;
+        padding: 20px;
+    }
+
+    .dashboard #bestsell button {
+        padding: 3px 14px;
+        background-color: #7B448A;
+        border: 1px solid #7B448A;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .dashboard .filter {
+        margin-top: 17px;
+    }
+
+    .dashboard .filter button {
+        border: 1px solid black;
+        color: black;
+        background: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .dashboard .filter button:hover {
+        background: #AC75BB;
+        color: white;
+    }
+
+    .dashboard .filter button:focus {
+        background: #AC75BB;
+        color: white;
+    }
+
+    .dashboard .container {
+        max-width: 1200px;
+        margin: 10px 10px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard h1 {
+        margin-bottom: 20px;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05); /* Custom stripe color */
+    }
+    
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.15); /* Custom hover color */
+    }
+    
+    .table-dark th {
+        color: white;
+    }
+    
+    /* .dashboard table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .dashboard table,
+    th,
+    td {
+        border: 1px solid #ddd;
+        border-bottom-color: #232321;
+        border-bottom-width: .5px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+
+    .dashboard th,
+    td {
+        padding: 13px;
+        text-align: left;
+    }
+
+    .dashboard th {
+        font-weight: 600;
+        color: #232321;
+        opacity: 84%;
+    } */
+
+    
+
+    .dashboard .status {
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    }
+
+    .dashboard .status.cancel {
+        color: red;
+    }
+
+    .dashboard .status.delivered {
+        color: green;
+    }
+
+
+    /* customer page */
+
+    .customer {
+        width: 100%;
+        height: 100%;
+    }
+
+    #container {
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 6px;
+    }
+
+    #container h3 {
+        padding: 9px 3px;
+    }
+
+    #container h5 {
+        padding: 2px 18px;
+    }
+
+    .customer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+    }
+
+    .customer th,
+    td {
+        
+        padding: 8px;
+        color: #07150a;
+    }
+
+
+    .customer th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .customer .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+
+    .customer button {
+        padding: 4px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .customer button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    /* Report style */
+    .productmkreport {
+        width: 100%;
+        height: 100%;
+        padding: 4px 8px;
+        border: 1px solid #ddd;
+    }
+
+    /* Product style */
+
+
+    #procont {
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        background-color: white;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+    }
+
+    #procont .headerpro {
+        width: 100%;
+        height: 10vh;
+        padding: 15px 13px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #procont .protitle {
+        display: flex;
+        width: fit-content;
+        padding: 5px 8px;
+        font-weight: 500;
+        height: fit-content;
+        border-radius: 10px;
+        color: white;
+        background-color: #DA1C5C;
+    }
+
+    #procont .protitle button {
+        margin-top: 0px;
+    }
+
+    #procont .tablepro {
+        width: 100%;
+        height: 80vh;
+        max-height: 80vh;
+        padding: 5px 10px;
+        border-radius: 7px;
+        border: 1px solid #ddd;
+        margin-top: 12px;
+        background-color: white;
+    }
+
+    #procont #search-input {
+        width: 95%;
+        height: 40px;
+        outline: 0;
+        border: 1px solid #ddd;
+        padding: 4px 5px;
+        border-radius: 8px;
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+
+    #procont .tablepro tr {
+        width: 100%;
+        height: fit-content;
+    }
+
+    #procont .headerpro a {
+        text-decoration: none;
+    }
+
+    #procont .protitle svg {
+        margin-top: 6px;
+    }
+
+    #procont .headerpro button {
+        color: white;
+        border-radius: 8px;
+        font-size: small;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 4px 9px;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    #procont .tableproduct input {
+        margin-bottom: 20px;
+        padding: 6px;
+        font-size: 16px;
+        width: 95%;
+        margin-left: 20px;
+        margin-top: 12px;
+        outline: 0;
+        border: 1px solid #b1b1b1;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    #procont .tableproduct table {
+        width: 95%;
+        background-color: #ddd;
+        border-radius: 8px;
+        margin-left: 20px;
+        border-collapse: collapse;
+        margin-top: 5px;
+    }
+
+    #procont .tableproduct th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px auto;
+        text-align: left;
+    }
+
+    #procont .tableproduct th {
+        background-color: #f4f4f4;
+    }
+
+    #procont .tableproduct #pagination-controls {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #procont .tableproduct #pagination-controls button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    #procont .tableproduct img {
+        width: 25px;
+        /* Fixed width for the image */
+        height: 25px;
+        /* Fixed height for the image */
+        object-fit: cover;
+        /* Ensures image maintains aspect ratio and fills the box */
+        border-radius: 8px;
+    }
+
+    #procont .productmk form {
+        background-color: #EDEADE;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+    }
+
+    #procont #formflex {
+        display: flex;
+        width: 100%;
+    }
+
+    #procont #product-form {
+        width: 96%;
+        height: 100%;
+    }
+
+    #procont #part1form {
+        width: 50%;
+        display: flex;
+        line-height: 1.2;
+        padding: 7px 5px;
+        flex-direction: column;
+        height: 75vh;
+    }
+
+    #procont #part2form {
+        width: 50%;
+        display: flex;
+        line-height: 1.2;
+        padding: 7px 5px;
+        flex-direction: column;
+        height: 75vh;
+    }
+
+    #procont #formbutton {
+        text-align: center;
+        padding: 5px 4px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #procont #formbutton button {
+        padding: 5px 18px;
+        margin-left: 12px;
+        background-color: #894C9A;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #procont #formflex label {
+        margin-left: 12px;
+        padding: 4px 6px;
+    }
+
+    #procont #formflex input {
+        width: 90%;
+        height: 25px;
+        border-radius: 8px;
+        outline: 0;
+        padding: 3px 6px;
+        border: 1px solid #ddd;
+        margin-left: 12px;
+    }
+
+    #procont table,
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 6px 10px;
+        border-bottom-width: .5px;
+    }
+
+    /* product form style */
+    .productmk {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* marketing style */
+
+    .productmkm {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: white;
+        border-radius: 6px;
+    }
+
+    .market {
+        width: 100%;
+        height: 100%;
+    }
+
+    .market .container {
+        max-width: 90%;
+        margin: 28px auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .market h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .market form {
+        margin-bottom: 20px;
+    }
+
+    .market label,
+    input,
+    textarea {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .market input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .market button {
+        padding: 8px 18px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .market button:hover {
+        background-color: #45a049;
+    }
+
+    .market ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .market li {
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .market li p {
+        margin: 5px 0;
+    }
+
+    .market .delete-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 6px 12px;
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+    /* Vendorlist style */
+
+    .vendorlisttable {
+        width: 100%;
+        height: 100%;
+        padding: 4px 8px;
+    }
+
+    #titl {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 5px;
+    }
+
+    #titl button {
+        padding: 4px 8px;
+        background-color: #7B448A;
+        border: 1px solid #7B448A;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 8px;
+        margin-top: 12px;
+    }
+    #procontv{
+        width: 100%;
+        margin: 0;
+    }
+    .vendorlisttable table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .vendorlisttable th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .vendorlisttable th {
+        background-color: #f2f2f2;
+    }
+
+    .vendorlisttable .pagination {
+        display: flex;
+        justify-content: center;
+    }
+
+    .vendorlisttable .pagination button {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        background-color: #36A2EB;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .vendorlisttable .pagination button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+
+
+    /* vendor form style */
+    .produtcmkvendor {
+        width: 100%;
+        height: 100%;
+    }
+
+    .formvendor {
+        width: 100%;
+        height: 100%;
+        padding: 1px 8px;
+    }
+
+    .formvendor .form-container {
+        margin-bottom: 20px;
+    }
+
+    .formvendor .form-container input,
+    .form-container button {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .formvendor .form-container button {
+        background-color: #36A2EB;
+        color: white;
+        cursor: pointer;
+    }
+
+    .formvendor .form-container button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+
+    .formvendor #map {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 0px;
+    }
+
+    .formvendor #details {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+
+    .formvendor #details div {
+        width: 95%;
+    }
+
+    .formvendor .ownercontact {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .formvendor #par1 {
+        width: 90%;
+        height: auto;
+    }
+
+    .formvendor #par1 input {
+        width: 95%;
+    }
+
+    .formvendor #par2 {
+        width: 90%;
+        height: auto;
+    }
+
+    .formvendor #par2 input {
+        width: 100%;
+    }
+    .form-group select{
+        width: 100%;
+    }
+    .form-control:focus{
+        outline: .1px solid black;
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    /* add brands style */
+
+    #addbrandm {
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+        padding: 4px 8px;
+        border: 1px solid #ddd;
+    }
+    table{
+        border-radius: 10px;
+    }
+
+    #addbrandm table,
+    th,
+    td {
+        border-radius: 8px;
+        border-collapse: collapse;
+    }
+
+    #addbrandm th,
+    td {
+        padding: 10px;
+    }
+
+    #addbrandm img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    #addbrandm form {
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    #addbrandm #inpuform {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    #addbrandm #labe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #addbrandm #displayTable {
+        width: 100%;
+    }
+
+    #addbrandm tbody {
+        text-align: center;
+    }
+
+    #submitbtn {
+        text-align: center;
+        width: 100%;
+    }
+
+    #submitbtn button {
+        padding: 4px 9px;
+        background-color: #7B448A;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    /* Return req style */
+
+    #procontreturn {
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #procontreturn .container {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 17px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #procontreturn table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    #procontreturn th,
+    td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #procontreturn th {
+        background-color: #f2f2f2;
+    }
+
+    #procontreturn .pagination {
+        display: flex;
+        justify-content: center;
+    }
+
+    #procontreturn .pagination button {
+        padding: 10px 15px;
+    }
+}

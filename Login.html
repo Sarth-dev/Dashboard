@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2px;
+            display: flex;
+            width: 80%;
+            height: 74vh;
+            border-radius: 9px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .part1contain {
+            width: 50%;
+            height: auto;
+        }
+
+        .part1contain img {
+            width: 100%;
+            height: 100%;
+            border-radius: 9px;
+        }
+
+        .part2contain label {
+            text-align: left;
+            margin-left: 12px;
+        }
+
+        .part2contain {
+            width: 50%;
+            text-align: center;
+            height: auto;
+        }
+
+        .part2contain input {
+            width: 90%;
+            margin-left: 12px;
+            border-radius: 10px;
+            outline: 0;
+        }
+
+        .part2contain button {
+            width: 90%;
+            margin-left: 18px;
+            margin-top: 12px;
+            padding: 8px 10px;
+            border-radius: 9px;
+            color: white;
+            background-color: #894C9A;
+            border: 1px solid #894C9A;
+        }
+
+        .part2contain button:hover {
+            background-color: #7B448A;
+        }
+
+        .part2contain div {
+            width: 97%;
+            height: 5vh;
+            margin-left: 5px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            // This is where you handle the Google login response.
+            console.log("Encoded JWT ID token: " + response.credential);
+            // Send the token to your backend for verification and authentication
+        }
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_GOOGLE_CLIENT_ID',
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("googleSignInButton"),
+                { theme: "outline", size: "large" }  // customization attributes
+            );
+            google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+
+        function myfunction(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            window.location.href = "index.html"; // Redirect to the dashboard page
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="part1contain">
+            <img src="/premium_photo-1661700152890-931fb04588e6.avif" alt="">
+        </div>
+        <div class="part2contain">
+            <h2>Login</h2>
+            <form action="form.php" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button onclick="myfunction()" id="loginButton" type="submit">Login</button>
+            </form>
+            <div>
+                <div id="googleSignInButton"></div>
+            </div>
+            <p>Don't have an account? <a href="Signup.html">Sign up</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

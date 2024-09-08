@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Alert Box</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Stylish Alert Box */
+        .alert-custom {
+            background-color: #343a40; /* Dark background */
+            color: white; /* White text */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            padding: 20px;
+            width: 308px;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .alert-custom .alert-icon { 
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .alert-custom .close {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+        }
+        
+        .alert-custom .close:hover {
+            color: #ccc;
+        }
+        
+        /* Alert types (optional, for different alert styles) */
+        .alert-custom-success {
+            background-color: #28a745; /* Success background */
+        }
+        
+        .alert-custom-warning {
+            background-color: #ffc107; /* Warning background */
+            color: #212529;
+        }
+        
+        .alert-custom-danger {
+            background-color: #dc3545; /* Danger background */
+        }
+        
+        .alert-custom-info {
+            background-color: #17a2b8; /* Info background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Example of a custom alert -->
+
+        <div class="alert alert-custom alert-custom-info" role="alert">
+            <span class="alert-icon">&#8505;</span> <!-- Info icon -->
+            This is an info alert—just so you know!
+            <a href="#" class="close" data-bs-dismiss="alert" aria-label="Close">&times;</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

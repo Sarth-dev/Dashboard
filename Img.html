@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the modal */
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-footer {
+            justify-content: center;
+        }
+
+        .order-details-table td {
+            padding: 8px 16px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .order-details-table td.label {
+            width: 150px;
+            color: #007bff;
+        }
+
+        .modal-body {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to trigger the modal (For testing purposes) -->
+    <button class="btn btn-primary" onclick="viewOrder(this)">View Order</button>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderDetailsLabel">Order Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="order-details-table">
+                        <tr>
+                            <td class="label">Order ID:</td>
+                            <td id="modalOrderId"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Customer Name:</td>
+                            <td id="modalCustomerName"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Order Date:</td>
+                            <td id="modalOrderDate"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Order Amount:</td>
+                            <td id="modalOrderAmount"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Delivery Status:</td>
+                            <td id="modalDeliveryStatus"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function viewOrder(button) {
+            const row = button.parentElement.parentElement;
+            const cells = row.getElementsByTagName('td');
+
+            document.getElementById('modalOrderId').textContent = cells[0].textContent;
+            document.getElementById('modalCustomerName').textContent = cells[1].textContent;
+            document.getElementById('modalOrderDate').textContent = cells[2].textContent;
+            document.getElementById('modalOrderAmount').textContent = cells[3].textContent;
+            document.getElementById('modalDeliveryStatus').textContent = cells[4].textContent;
+
+            const orderDetailsModal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
+            orderDetailsModal.show();
+        }
+    </script>
+</body>
+</html>
